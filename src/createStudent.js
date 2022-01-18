@@ -15,6 +15,15 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
+const createStudent = (name) => {
+  // Estava dando uns erros, então decidi preencher antes de aplicar APENAS o return
+  if (name === null) {
+    return null;
+  }
+  return {
+    name,
+    feedback() { return 'Eita pessoa boa!'; },
+  };
+};    
 
 module.exports = createStudent;
